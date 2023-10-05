@@ -278,3 +278,27 @@ margin-right:40px;
 /* auto text container  */
 
 /* auto text container */
+
+.col {
+  transition: all 0.8s ease;
+}
+
+.col.hidden {
+  display: none;
+}
+
+.col.transition {
+  transform: translateX(-100%);
+}
+
+.col.change-one {
+  flex: 3; /* Initial width for col-3 */
+}
+
+.col.change-two {
+  flex: 9; /* Initial width for col-9 */
+}
+
+.col.change-three {
+  flex: 3; /* Initial width for col-3 */
+}
