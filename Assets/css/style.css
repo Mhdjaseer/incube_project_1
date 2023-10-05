@@ -1,0 +1,112 @@
+.ev-pt1{
+    position: relative;
+    padding:  4.625rem 0rem;
+}
+.ev-w{
+    width: 10.875rem;
+    height: 4.0625rem;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+}
+.ev-w>h4{
+    font-family:david libre;
+    font-weight:bolder ;
+    font-size: 2.9rem;
+    padding-top: 3.90rem;
+}
+
+.bg-ev{
+    opacity: 0.1;
+    height: 100%;
+    width: 100%;
+    transform: translate(-35%);
+}
+
+.ev-pt2{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+/* image carousel */
+
+.swiper {
+    width: 100%;
+    height: 100%;
+  }
+
+  .swiper-slide {
+    text-align: center;
+    font-size: 18px;
+    background: #fff;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+  }
+
+  .swiper-slide img {
+    display: block;
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+  }
+
+  .card{
+    padding: 30px;
+    border:none !important;
+    cursor: pointer; 
+    height: auto;
+  }
+
+  .card >img{
+    height: 300px;
+  }
+
+ .card-body{
+  background-color: black;
+ }
+ .card-text, .card-title{
+  color: white !important;
+ }
+
+ .btn { 
+  border-color: rgba(255,132,0,1) !important;
+  position: absolute;
+  transform: translate(-50%, -50%); 
+  width: 180px; 
+  height: 60px; 
+  text-decoration: none; 
+  text-align: center; 
+  margin-top: 40px; 
+  font-size: 20px; 
+  overflow: hidden; 
+  background: rgb(230,231,19);
+  background: linear-gradient(90deg, rgba(230,231,19,1) 9%, rgba(255,132,0,1) 100%);
+  border-radius: 0px !important;
+  font-size: larger !important;
+  font-weight: bolder;
+  translate: 50%;
+} 
+
+.btn::before { 
+  content: ""; 
+  position: absolute; 
+  width: 0; 
+  height: 0; 
+  left: 0; 
+  bottom: 0; 
+  border-style: solid; 
+  border-color:white; 
+  border-width: 80px 100px; 
+  z-index: -1; 
+  transform: rotate(360deg); 
+  transition: 1s; 
+  transform-origin: left; 
+} 
+
+.btn:hover::before { 
+  border-color:yellow; 
+  transform: rotate(60deg); 
+}
