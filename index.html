@@ -18,12 +18,18 @@
     <link rel="stylesheet" href="./Assets/css/bootstrap/css/bootstrap.css">
     <!-- fonnts family -->
     <link rel="preconnect" href="https://fonts.googleapis.com">
+
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+<link href="https://fonts.googleapis.com/css2?family=Dancing+Script&family=Fuggles&family=Kaushan+Script&family=Montserrat&family=Pacifico&display=swap" rel="stylesheet"></head>
+
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Dancing+Script&family=Fuggles&family=Kaushan+Script&family=Montserrat&family=Pacifico&display=swap" rel="stylesheet"></head>
 
   </head>
    
     <body>
+
     
 
   <!-- navbar -->
@@ -65,31 +71,12 @@
 
 
 
-    <div class="container">
-        <div class="row">   
-          <div class="col text ">
-            <h1 class="heading-center">We give the <br> best food for you</h1><br>
-            <p class="p-center">Lorem ipsum dolor sit amet consectetur, adipisicing elit. Fuga, magni!</p>
-            
-            <p class="p-center">
-            <i class="fa-brands fa-instagram fa-xl "></i>
-            <i class="fa-brands fa-facebook fa-xl"></i>
-          </p>
-          </div>
-          <div class="col pt-5">
-            <div class="parent">
-                <img class="image1" src="./Assets/images/pexels-volkan-vardar-3887985 1.png" ><br><br><br><br>
-                <img class="image2" src="./Assets/images/dish-2 2 (1).png" />
-                <img class="image3" src="./Assets/images/Vector.png" />
-                <img class="image4" src="./Assets/images/Vector (1).png" />
-                <img class="image5" src="./Assets/images/Vector (2).png" />
-              </div>
-          </div>
-
+    
         </div>
     </div>
 
 <!--------- section end-------- -->
+
 
 
 <!--welcome to shop-->
@@ -112,6 +99,7 @@
   </div>
   <!--end of welcome to shop-->
  
+
   
   
 <!-- kiran -->
@@ -188,13 +176,14 @@
       <div class="con-us">
 
           <div class="col p-0">
-              <h2>Contact Us</h2>
-              <input class="input" placeholder="Name"><br><br>
-              <input class="input" placeholder="Mobile No."><br><br>
-              <input class="input" placeholder="Email"><br><br>
-              <textarea class="form-control" placeholder="Comment" style="width: 90%;position: relative;left: 5%;height: 2.3em;"></textarea><br>
-              
-              <a href=""><i class="fa-solid fa-paper-plane" style="color: #f7f9fd;"></i>&nbsp;SEND</a><br><br>
+              <form id="submit-form" action="">
+                  <h3>Contact Us</h3>
+                  <input type="text" name="name" class="form-control" placeholder="Your Name" required>
+                  <input type="email" name="email" class="form-control" placeholder="Email" required>
+                  <input type="number" name="phone" class="form-control" placeholder="Mobile No." required>
+                  <textarea name="message" class="form-control" rows="4" placeholder="How can we help you?" required></textarea>
+                  <button type="submit"><i class="fa-solid fa-paper-plane" style="color: #f9fafa;"></i>&nbsp;Send</button>
+              </form>
 
           </div>
       </div>
@@ -204,12 +193,30 @@
 
 
 
+<script>
+  $("#submit-form").submit((e)=>{
+  e.preventDefault()
+  $.ajax({
+      url:"https://script.google.com/macros/s/AKfycbzXabUm5Aiqo_QQVM-O0IpNtv5gRvZbRs9hKHlmWlVLNSBT8SGZSFKvRwcFQUfm9SgNXw/exec",
+      data:$("#submit-form").serialize(),
+      method:"post",
+      success:function (response){
+          alert("Form submitted successfully")
+          window.location.reload()
+          //window.location.href="https://google.com"
+      },
+      error:function (err){
+          alert("Something Error")
+
+      }
+  })
+})
+</script>
 
       
 
   
-
-    <script src="https://kit.fontawesome.com/d0808f574e.js" crossorigin="anonymous"></script>
+    
     <script src="./Assets/css/bootstrap/js/bootstrap.js"></script>
     <script src="https://kit.fontawesome.com/30ce972ddf.js" crossorigin="anonymous"></script>
     <script src="https://kit.fontawesome.com/d0808f574e.js" crossorigin="anonymous"></script>
