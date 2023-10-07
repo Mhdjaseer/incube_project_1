@@ -1,29 +1,4 @@
-// Event carousel : Kiran
-const swiperev = new Swiper('.slider-ev', {
-    // Optional parameters
-    direction: 'horizontal',
-    loop: true,
-    slidesPerView: 1,
-    spaceBetween:75,
-    parallax: true,
-  
-    breakpoints: {
-      // when window width is >= 1200px
-      1200: {
-        slidesPerView: 2,
-        spaceBetween: 75,
-      },
-    },
-  
-    // If we need pagination    
-  pagination: {
-  el: '.swiper-pagination',
-  type: 'bullets',
-  clickable: true
-  },
-   
-  
-  });
+
   
   
   // ans
