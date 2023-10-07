@@ -4,14 +4,14 @@ const swiper = new Swiper('.swiper', {
   direction: 'horizontal',
   loop: true,
   slidesPerView: 1,
-  spaceBetween:75,
+  spaceBetween:20,
   parallax: true,
 
   breakpoints: {
     // when window width is >= 1200px
     1200: {
       slidesPerView: 2,
-      spaceBetween: 75,
+      spaceBetween: 20,
     },
   },
 
